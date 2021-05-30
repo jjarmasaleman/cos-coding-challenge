@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from '@core/state';
 import { AuthComponent } from '@modules/auth/components/auth.component';
 import { LoginComponent } from '@modules/auth/components/login/login.component';
 import { AuthService } from '@modules/auth/services/auth.service';
@@ -34,7 +35,7 @@ export class AuthModule {
   public static forRoot(): ModuleWithProviders<AuthModule> {
     return {
       ngModule: AuthModule,
-      providers: [AuthService],
+      providers: [AuthService, AuthGuard],
     };
   }
 }
