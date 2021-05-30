@@ -1,0 +1,77 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json",
+          "e2e/tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "plugins": ["@typescript-eslint"],
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
+        "prettier",
+        "plugin:prettier/recommended",
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "rules": {
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "explicit",
+            "overrides": {
+              "accessors": "no-public",
+              "constructors": "no-public"
+            }
+          }
+        ],
+        "@typescript-eslint/no-confusing-non-null-assertion": ["error"],
+        "@typescript-eslint/no-confusing-void-expression": ["error"],
+        "@typescript-eslint/no-unnecessary-boolean-literal-compare": ["error"],
+        "@typescript-eslint/prefer-literal-enum-member": ["error"],
+        "@typescript-eslint/prefer-ts-expect-error": ["error"],
+        "@typescript-eslint/require-array-sort-compare": [
+          "error",
+          {
+            "ignoreStringArrays": true
+          }
+        ],
+        "default-param-last": "off",
+        "@typescript-eslint/default-param-last": ["error"],
+        "dot-notation": "off",
+        "@typescript-eslint/dot-notation": ["off"],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": "classProperty",
+            "modifiers": ["static", "readonly"],
+            "format": ["UPPER_CASE"]
+          },
+          {
+            "selector": "enum",
+            "format": ["PascalCase"]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}
