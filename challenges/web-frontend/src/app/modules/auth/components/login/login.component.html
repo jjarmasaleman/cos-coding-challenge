@@ -1,0 +1,12 @@
+<form [formGroup]="form" (keyup.enter)="submit()">
+  <div>
+    <input type="text" formControlName="username">
+    <input type="password" formControlName="password">
+  </div>
+
+  <div>
+    <button type='button' (click)="submit()">
+      Sign in
+    </button>
+  </div>
+</form>
