@@ -22,6 +22,12 @@
       "dom"
     ],
     "paths": {
+      "@theme/*": [
+        "src/app/theme/*"
+      ],
+      "@core/*": [
+        "src/app/core/*"
+      ],
       "@app/*": [
         "src/app/*"
       ],
