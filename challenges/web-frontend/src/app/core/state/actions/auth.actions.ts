@@ -1,19 +1,11 @@
-import { ActionEnum } from '@core/state/enums/action.enum';
-import { User } from '@modules/auth';
+import { ActionEnum } from '@core/state';
+import { Auth, User } from '@modules/auth';
 import { Action } from '@ngrx/store';
 
 export class Login implements Action {
   public readonly type = ActionEnum.Login;
 
-  constructor(public payload: { token: string }) {}
-}
-
-export class Logout implements Action {
-  public readonly type = ActionEnum.Logout;
-}
-
-export class UserRequested implements Action {
-  public readonly type = ActionEnum.UserRequested;
+  constructor(public payload: { auth: Auth }) {}
 }
 
 export class UserLoaded implements Action {
@@ -22,4 +14,10 @@ export class UserLoaded implements Action {
   constructor(public payload: { user: User }) {}
 }
 
-export type AuthActions = Login | Logout | UserRequested | UserLoaded;
+export class Logout implements Action {
+  public readonly type = ActionEnum.Logout;
+
+  constructor(public payload?: { forced: boolean }) {}
+}
+
+export type AuthActions = Login | UserLoaded | Logout;

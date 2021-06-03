@@ -5,6 +5,7 @@ import { ActionReducerMap } from '@ngrx/store';
 export interface AppState {}
 
 export interface AuthState {
+  accessDenied: boolean;
   loggedIn: boolean;
   user?: User;
 }
