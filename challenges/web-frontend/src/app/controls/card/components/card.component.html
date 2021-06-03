@@ -1,0 +1,46 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title [title]='vehicle.label'>{{ vehicle.label }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="vehicle.vehicleImagePath" [alt]="vehicle.label">
+
+  <mat-card-content>
+    <div class='card-body'>
+      <div class='card-body-item' title='First registration' i18n-title>
+        <la-icon icon="calendar"></la-icon>
+        <span i18n>{{ vehicle.firstRegistration }}</span>
+      </div>
+      <div class='card-body-item' title='Mileage' i18n-title>
+        <la-icon icon="tachometer-alt"></la-icon>
+        <span i18n>{{ vehicle.mileage }} Km</span>
+      </div>
+      <div class='card-body-item' title='Fuel Type' i18n-title>
+        <la-icon icon="gas-pump"></la-icon>
+        <span i18n>{{ vehicle.fuelType }}</span>
+      </div>
+      <div class='card-body-item' title='Transmission' i18n-title>
+        <la-icon icon="sitemap"></la-icon>
+        <span i18n>{{ vehicle.transmissionType }}</span>
+      </div>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <div class='card-info'>
+      <div class='card-info-item' title='Remaining time' i18n-title>
+        <la-icon icon="hourglass-half"></la-icon>
+        <span [ngClass]="{ 'highlight': vehicle.highlightTime }" i18n>{{ vehicle.remainingTime }}</span>
+      </div>
+      <div class='card-info-item' title='Current highest bid' i18n-title>
+        <la-icon icon="hand-holding-usd"></la-icon>
+        <span i18n>{{ vehicle.highestBid }} €</span>
+      </div>
+    </div>
+  </mat-card-actions>
+
+  <mat-card-footer *ngIf='vehicle.isHighestBidder'>
+    <div class='card-footer' title='You are the highest bidder!' i18n-title>
+      <span i18n>You own it!</span>
+    </div>
+  </mat-card-footer>
+</mat-card>

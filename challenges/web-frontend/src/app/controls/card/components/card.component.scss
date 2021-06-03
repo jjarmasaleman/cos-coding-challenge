@@ -1,0 +1,61 @@
+// Card
+// ------------------------------------------
+@import 'src/assets/sass/imports';
+
+.card {
+  width: 270px;
+  border: 1px solid $border-color;
+
+  &-body {
+    padding: 10px 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    height: 70px;
+
+    &-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      cursor: pointer;
+      padding: 5px;
+
+      &:hover {
+        background-color: $background-color;
+      }
+    }
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-around;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      padding: 5px;
+
+      &:hover {
+        background-color: $background-color;
+      }
+
+      span {
+        padding-left: 5px;
+
+        &.highlight {
+          color: $danger-color;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  &-footer {
+    background-color: $danger-color;
+    text-align: center;
+    cursor: pointer;
+    color: $text-color-light;
+  }
+}
