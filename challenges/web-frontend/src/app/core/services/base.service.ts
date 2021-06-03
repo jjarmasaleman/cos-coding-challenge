@@ -41,7 +41,7 @@ export class BaseService {
     return (error: HttpErrorResponse): Observable<T> => {
       switch (error.status) {
         case 401:
-          this.notificationService.showNotification('Invalid email or password', 3000);
+          this.notificationService.showNotification('Invalid email or password', 5000);
           break;
         case 500:
           this.notificationService.showNotification('Internal server error', 3000);
