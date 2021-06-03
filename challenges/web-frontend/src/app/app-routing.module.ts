@@ -1,32 +1,30 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthGuard } from '@core/state';
+import { AuthGuard, RoleGuard } from '@core/state';
 import { BaseComponent } from '@theme/base/base.component';
 
 const routes: Routes = [
   {
-    path: 'auth',
+    path: 'login',
     loadChildren: () => import('@modules/auth/auth.module').then((m) => m.AuthModule),
   },
   {
     path: '',
     component: BaseComponent,
-    canActivate: [AuthGuard],
+    canActivate: [AuthGuard, RoleGuard],
+    data: {
+      roles: ['{SALESMAN_USER}', '{BUYER_USER}'],
+    },
     children: [
       {
         path: 'auctions',
         loadChildren: () => import('@modules/auctions/auctions.module').then((m) => m.AuctionsModule),
       },
-      {
-        path: '',
-        redirectTo: 'auctions',
-        pathMatch: 'full',
-      },
     ],
   },
   {
     path: '**',
-    redirectTo: 'auctions',
+    redirectTo: 'login',
     pathMatch: 'full',
   },
 ];

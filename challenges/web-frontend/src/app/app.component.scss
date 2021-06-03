@@ -1,0 +1,28 @@
+// Global tags
+// ------------------------------------------
+@import 'src/assets/sass/imports';
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  user-select: none;
+}
+
+body {
+  font-family: $font-regular;
+  font-size: $font-size-big;
+  color: $text-color;
+}
+
+.logo {
+  &-big {
+    width: 175px;
+    height: 175px;
+  }
+
+  &-medium {
+    width: 50px;
+    height: 50px;
+  }
+}
