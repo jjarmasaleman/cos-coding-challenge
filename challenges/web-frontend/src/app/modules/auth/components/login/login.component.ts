@@ -42,7 +42,10 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     this.store.pipe(select(accessDenied), takeUntil(this.unsubscribe)).subscribe((noAccess) => {
       if (noAccess) {
-        this.notificationsService.showNotification('Access denied. Please contact your help desk for more information');
+        this.notificationsService.showNotification(
+          'Access denied. Please contact your help desk for more information',
+          3000
+        );
       }
     });
 
@@ -63,7 +66,7 @@ export class LoginComponent implements OnInit, OnDestroy {
 
     const valid = this.validate();
     if (!valid) {
-      this.notificationsService.showNotification('Invalid email or password');
+      this.notificationsService.showNotification('Invalid email or password', 3000);
 
       // A form with invalid status should not be saved
       return;
