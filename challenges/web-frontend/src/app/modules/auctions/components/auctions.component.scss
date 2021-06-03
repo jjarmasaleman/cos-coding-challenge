@@ -1,0 +1,17 @@
+// Auctions
+// ------------------------------------------
+@import 'src/assets/sass/imports';
+
+.auctions{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  &-card {
+    padding: 25px 10px;
+  }
+
+  &-message {
+    font-size: $font-size-header;
+  }
+}

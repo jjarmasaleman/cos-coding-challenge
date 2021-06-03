@@ -1,1 +1,7 @@
+<div class='auctions'>
+  <ng-container *ngFor='let auction of auctionList'>
+    <app-card class='auctions-card' [data]='auction'></app-card>
+  </ng-container>
+  <div *ngIf='auctionList.length === 0' class='auctions-message'>Currently no auctions available</div>
+</div>
 
