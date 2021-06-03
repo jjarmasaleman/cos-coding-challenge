@@ -1,0 +1,31 @@
+// Footer
+// ------------------------------------------
+@import 'src/assets/sass/imports';
+
+.footer {
+  border-top: 1px solid $border-color;
+  background: $background-color-light;
+  padding: 0 60px;
+  height: 45px;
+
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 10px;
+    font-size: $font-size-small;
+  }
+
+  &-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+
+    li {
+      padding: 0 10px;
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+<header class='header'>
+  <div class='header-item'>
+    <a href="/auctions">
+      <img class="logo-medium" alt="COS Logo" src="assets/images/logo.svg">
+    </a>
+    <span class='header-title' i18n>Auctions</span>
+  </div>
+
+  <div class='header-item'>
+    <div class='header-action'>
+      <la-icon icon="bell"></la-icon>
+      <span class='header-notifications'>{{ notifications }}</span>
+    </div>
+    <div class='header-action' (click)='openMenu($event)'>
+      <la-icon icon="user"></la-icon>
+    </div>
+
+    <div #overflowMenu class='overflow-menu' [ngClass]="{'visible': menuVisible}">
+      <ul>
+        <li>
+          <p i18n>Welcome, {{ username }}!</p>
+        </li>
+        <li>
+          <button type="button" class='logout' (click)="logout()">
+            <la-icon icon="sign-out-alt"></la-icon>
+            <span i18n>Sign out</span>
+          </button>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</header>

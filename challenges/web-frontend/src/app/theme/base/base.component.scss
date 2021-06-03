@@ -1,0 +1,10 @@
+// Base
+// ------------------------------------------
+@import 'src/assets/sass/imports';
+
+.content {
+  height: calc(100% - 71px - 46px - #{$standard-spacing});
+  background-color: $background-color;
+  padding: ($standard-spacing / 2) $standard-spacing;
+  overflow: auto;
+}
