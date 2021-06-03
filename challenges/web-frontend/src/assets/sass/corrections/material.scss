@@ -1,0 +1,60 @@
+// Corrections to Material Controls
+// -------------------------------------
+@import '../imports';
+
+snack-bar-container.mat-snack-bar-container {
+  padding: 0;
+  margin: 5px;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-infix {
+  border: 1px solid $border-color-light;
+  border-bottom: 1px solid $border-color-dark;
+  padding: 8px 5px;
+}
+
+.mat-card-header {
+  .mat-card-header-text {
+    width: 100%;
+    max-width: 240px;
+  }
+
+  .mat-card-title {
+    font-size: $font-size-title;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+button.mat-flat-button {
+  &.primary {
+    width: 100%;
+    border-radius: 0;
+    color: $text-color-light;
+    background-color: $brand-secondary-color;
+
+    &:hover {
+      background-color: $button-hover;
+    }
+  }
+}
+
+img.mat-card-image {
+  height: 200px;
+}
+
+img.mat-card-image,
+mat-card-content.mat-card-content,
+mat-card-actions.mat-card-actions {
+  margin-bottom: 0;
+}
+
+mat-card-actions {
+  border-top: 1px solid $border-color;
+}
+
+mat-card-footer.mat-card-footer {
+  margin-bottom: -17px;
+}
