@@ -1,0 +1,35 @@
+// Login
+// ------------------------------------------
+@import 'src/assets/sass/imports';
+
+.login {
+  &-card {
+    padding: 20px 40px 30px 40px;
+    max-width: 400px;
+    border-top: 6px solid $brand-primary-color;
+    background: $background-color-light;
+    margin: auto;
+  }
+
+  &-header {
+    display: flex;
+    flex-direction: column;
+
+    &-text {
+      font-weight: 300;
+      font-size: $font-size-header;
+      text-align: center;
+    }
+  }
+}
+
+.form {
+  &-wrapper {
+    margin: 20px 0 10px 0;
+  }
+
+  &-input {
+    min-height: 70px;
+    width: 100%;
+  }
+}

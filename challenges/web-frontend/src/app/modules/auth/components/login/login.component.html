@@ -1,12 +1,22 @@
-<form [formGroup]="form" (keyup.enter)="submit()">
-  <div>
-    <input type="text" formControlName="username">
-    <input type="password" formControlName="password">
+<div class='login-card'>
+  <header class='login-header'>
+    <h1 class='login-header-text' i18n>Sign in to your account</h1>
+  </header>
+
+  <div class='form-wrapper'>
+    <form [formGroup]="form" (keyup.enter)="submit()">
+      <mat-form-field class='form-input' floatLabel='always'>
+        <input matInput type="text" autocomplete="off" placeholder="Email" formControlName="username">
+      </mat-form-field>
+
+      <mat-form-field class='form-input' floatLabel='always'>
+        <input matInput type="password" autocomplete="off" placeholder="Password" formControlName="password">
+      </mat-form-field>
+
+      <button mat-flat-button (click)="submit()" class="primary">
+        <span i18n>Sign In</span>
+      </button>
+    </form>
   </div>
 
-  <div>
-    <button type='button' (click)="submit()">
-      Sign in
-    </button>
-  </div>
-</form>
+</div>

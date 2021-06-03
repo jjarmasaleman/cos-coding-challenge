@@ -1,0 +1,22 @@
+// Auth
+// ------------------------------------------
+@import 'src/assets/sass/imports';
+
+.auth {
+  &-background {
+    background: url(../../../../assets/images/bg.png) no-repeat center center fixed;
+    background-size: cover;
+    overflow: auto;
+    height: 100%;
+  }
+
+  &-header {
+    padding-top: $standard-spacing * 2;
+    padding-bottom: $standard-spacing;
+    text-align: center;
+  }
+
+  &-body {
+    padding-bottom: $standard-spacing;
+  }
+}
