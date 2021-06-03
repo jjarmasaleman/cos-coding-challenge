@@ -1,0 +1,29 @@
+// Notifications
+// ------------------------------------------
+@import 'src/assets/sass/imports';
+
+.notification {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border: 1px solid $text-color;
+  background-color: $background-color-light;
+
+  &-message {
+    font-size: $font-size-bigger;
+    text-align: center;
+    padding-right: 40px;
+    color: $text-color;
+    width: 100%;
+  }
+
+  &-icon {
+    display: flex;
+    padding: 10px;
+  }
+
+  &.danger{
+    border-bottom: 5px solid $danger-color;
+    color: $danger-color;
+  }
+}
